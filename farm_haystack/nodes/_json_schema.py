@@ -8,9 +8,10 @@ import logging
 from pathlib import Path
 
 import pydantic.schema
-from pydantic import BaseConfig, BaseSettings, Required, SecretStr, create_model
+from pydantic_settings import BaseSettings
+from pydantic import BaseConfig, Required, SecretStr, create_model
 from pydantic.typing import ForwardRef, evaluate_forwardref, is_callable_type
-from pydantic.fields import ModelField
+from pydantic.fields import FieldInfo
 from pydantic.schema import (
     SkipField,
     TypeModelOrEnum,
@@ -45,7 +46,7 @@ class Settings(BaseSettings):
 # Monkey patch Pydantic's field_singleton_schema to convert classes and functions to
 # strings in JSON Schema
 def field_singleton_schema(
-    field: ModelField,
+    field: FieldInfo,
     *,
     by_alias: bool,
     model_name_map: Dict[TypeModelOrEnum, str],
@@ -56,9 +57,9 @@ def field_singleton_schema(
 ) -> Tuple[Dict[str, Any], Dict[str, Any], Set[str]]:
     try:
         # Typing with optional dependencies is really tricky. Let's just use Any for now. To be fixed.
-        if isinstance(field.type_, ForwardRef):
-            logger.debug(field.type_)
-            field.type_ = Any
+        if isinstance(field.annotation, ForwardRef):
+            logger.debug(field.annotation)
+            field.annotation = Any
         return _field_singleton_schema(
             field,
             by_alias=by_alias,

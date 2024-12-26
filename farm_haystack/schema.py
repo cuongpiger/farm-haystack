@@ -16,7 +16,7 @@ import numpy as np
 import pandas as pd
 from numpy import ndarray
 from pandas import DataFrame
-from pydantic import BaseConfig, Field
+from pydantic import ConfigDict, Field
 
 # We are using Pydantic dataclasses instead of vanilla Python's
 # See #1598 for the reasons behind this choice & performance considerations
@@ -28,7 +28,7 @@ from farm_haystack.mmh3 import hash128
 logger = logging.getLogger(__name__)
 
 
-BaseConfig.arbitrary_types_allowed = True
+ConfigDict.arbitrary_types_allowed = True
 
 
 #: Types of content_types supported

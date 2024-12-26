@@ -4,7 +4,7 @@ import logging
 import time
 import json
 
-from pydantic import BaseConfig
+from pydantic import ConfigDict
 from fastapi import FastAPI, APIRouter
 import farm_haystack
 from farm_haystack import Pipeline
@@ -18,7 +18,7 @@ logging.getLogger("haystack").setLevel(LOG_LEVEL)
 logger = logging.getLogger("haystack")
 
 
-BaseConfig.arbitrary_types_allowed = True
+ConfigDict.arbitrary_types_allowed = True
 
 
 router = APIRouter()

@@ -5,13 +5,13 @@ import numpy as np
 import pandas as pd
 
 from pydantic import BaseModel, Field, Extra
-from pydantic import BaseConfig
+from pydantic import ConfigDict
 
 from farm_haystack.schema import Answer, Document
 
 
-BaseConfig.arbitrary_types_allowed = True
-BaseConfig.json_encoders = {
+ConfigDict.arbitrary_types_allowed = True
+ConfigDict.json_encoders = {
     np.ndarray: lambda x: x.tolist(),
     pd.DataFrame: lambda x: [x.columns.tolist()] + x.values.tolist(),
 }
