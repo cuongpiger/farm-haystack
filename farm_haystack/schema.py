@@ -16,7 +16,7 @@ import numpy as np
 import pandas as pd
 from numpy import ndarray
 from pandas import DataFrame
-from pydantic import Field, BaseModel
+from pydantic import Field, ConfigDict
 
 # We are using Pydantic dataclasses instead of vanilla Python's
 # See #1598 for the reasons behind this choice & performance considerations
@@ -36,8 +36,8 @@ FilterType = Dict[str, Union[Dict[str, Any], List[Any], str, int, float, bool]]
 LABEL_DATETIME_FORMAT: str = "%Y-%m-%d %H:%M:%S"
 
 
-@dataclass
-class Document(BaseModel):
+@dataclass(config=ConfigDict(arbitrary_types_allowed=True))
+class Document:
     id: str
     content: Union[str, DataFrame]
     content_type: ContentTypes = Field(default="text")
