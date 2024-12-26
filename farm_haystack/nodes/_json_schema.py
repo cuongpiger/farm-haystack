@@ -9,7 +9,7 @@ from pathlib import Path
 
 import pydantic.schema
 from pydantic_settings import BaseSettings
-from pydantic import BaseConfig, Required, SecretStr, create_model
+import pydantic
 from pydantic.typing import ForwardRef, evaluate_forwardref, is_callable_type
 from pydantic.fields import FieldInfo
 from pydantic.schema import (
@@ -76,7 +76,7 @@ def field_singleton_schema(
             default = field.default.__name__
         else:
             default = field.default
-        if not field.required:
+        if not field.is_required():
             schema["default"] = encode_default(default)
         return schema, {}, set()
 
@@ -108,7 +108,7 @@ def get_typed_annotation(param: inspect.Parameter, globalns: Dict[str, Any]) -> 
     return annotation
 
 
-class Config(BaseConfig):
+class Config(BaseModel):
     extra = "forbid"  # type: ignore
 
 
@@ -211,7 +211,7 @@ def create_schema_for_node_class(node_class: Type[BaseComponent]) -> Tuple[Dict[
         annotation = Any
         if param.annotation != param.empty:
             annotation = param.annotation
-        default = Required
+        default = param.empty
         if param.default != param.empty:
             default = param.default
         param_fields_kwargs[param.name] = (annotation, default)
