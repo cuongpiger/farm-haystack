@@ -16,7 +16,7 @@ import numpy as np
 import pandas as pd
 from numpy import ndarray
 from pandas import DataFrame
-from pydantic import Field
+from pydantic import Field, BaseModel
 
 # We are using Pydantic dataclasses instead of vanilla Python's
 # See #1598 for the reasons behind this choice & performance considerations
@@ -37,7 +37,7 @@ LABEL_DATETIME_FORMAT: str = "%Y-%m-%d %H:%M:%S"
 
 
 @dataclass
-class Document:
+class Document(BaseModel):
     id: str
     content: Union[str, DataFrame]
     content_type: ContentTypes = Field(default="text")
