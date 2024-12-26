@@ -10,7 +10,7 @@ from pydantic import BaseModel, Field, validator
 
 from fastapi import FastAPI, APIRouter
 
-import haystack
+import farm_haystack
 
 from rest_api.utils import get_app
 from rest_api.config import LOG_LEVEL
@@ -125,5 +125,5 @@ def get_health_status():
     """
 
     return HealthResponse(
-        version=haystack.__version__, cpu=get_cpu_usage(), memory=get_memory_usage(), gpus=get_gpu_usage()
+        version=farm_haystack.__version__, cpu=get_cpu_usage(), memory=get_memory_usage(), gpus=get_gpu_usage()
     )

@@ -2,11 +2,11 @@ import logging
 import os
 from typing import Dict, Any
 
-from haystack import Pipeline
-from haystack.document_stores import InMemoryDocumentStore
-from haystack.nodes import PromptNode, PromptTemplate, TopPSampler
-from haystack.nodes.ranker import LostInTheMiddleRanker
-from haystack.nodes.retriever.web import WebRetriever
+from farm_haystack import Pipeline
+from farm_haystack.document_stores import InMemoryDocumentStore
+from farm_haystack.nodes import PromptNode, PromptTemplate, TopPSampler
+from farm_haystack.nodes.ranker import LostInTheMiddleRanker
+from farm_haystack.nodes.retriever.web import WebRetriever
 
 search_key = os.environ.get("SERPERDEV_API_KEY")
 if not search_key:

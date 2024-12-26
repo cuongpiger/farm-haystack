@@ -11,8 +11,8 @@ from unittest.mock import patch
 import pandas as pd
 import pytest
 
-from haystack import Document
-from haystack.nodes import (
+from farm_haystack import Document
+from farm_haystack.nodes import (
     AzureConverter,
     CsvTextConverter,
     DocxToTextConverter,

@@ -1,7 +1,7 @@
 import json
 import os
 import pytest
-from haystack.document_stores import eval_data_from_json
+from farm_haystack.document_stores import eval_data_from_json
 
 
 @pytest.fixture

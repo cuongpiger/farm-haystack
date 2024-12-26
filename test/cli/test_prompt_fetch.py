@@ -2,8 +2,8 @@ from unittest.mock import patch
 
 import pytest
 
-from haystack.cli.entry_point import main_cli
-from haystack.nodes.prompt.prompt_template import PromptNotFoundError
+from farm_haystack.cli.entry_point import main_cli
+from farm_haystack.nodes.prompt.prompt_template import PromptNotFoundError
 
 
 @pytest.mark.unit

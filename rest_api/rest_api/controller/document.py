@@ -3,8 +3,8 @@ from typing import Optional, List
 import logging
 
 from fastapi import FastAPI, APIRouter
-from haystack.document_stores import BaseDocumentStore
-from haystack.schema import Document
+from farm_haystack.document_stores import BaseDocumentStore
+from farm_haystack.schema import Document
 
 from rest_api.utils import get_app, get_pipelines
 from rest_api.config import LOG_LEVEL

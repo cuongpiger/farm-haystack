@@ -9,13 +9,13 @@ from torch.utils.data import SequentialSampler
 from tqdm import tqdm
 from transformers import AutoTokenizer
 
-from haystack.modeling.data_handler.dataloader import NamedDataLoader
-from haystack.modeling.data_handler.processor import TextSimilarityProcessor
-from haystack.modeling.model.biadaptive_model import BiAdaptiveModel
-from haystack.modeling.model.language_model import get_language_model, DPREncoder
-from haystack.modeling.model.prediction_head import TextSimilarityHead
+from farm_haystack.modeling.data_handler.dataloader import NamedDataLoader
+from farm_haystack.modeling.data_handler.processor import TextSimilarityProcessor
+from farm_haystack.modeling.model.biadaptive_model import BiAdaptiveModel
+from farm_haystack.modeling.model.language_model import get_language_model, DPREncoder
+from farm_haystack.modeling.model.prediction_head import TextSimilarityHead
 
-from haystack.modeling.utils import initialize_device_settings
+from farm_haystack.modeling.utils import initialize_device_settings
 
 
 def test_dpr_modules():

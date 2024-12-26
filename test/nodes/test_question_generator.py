@@ -2,13 +2,13 @@ from typing import List
 
 import pytest
 
-from haystack.pipelines import (
+from farm_haystack.pipelines import (
     QuestionAnswerGenerationPipeline,
     QuestionGenerationPipeline,
     RetrieverQuestionGenerationPipeline,
 )
-from haystack.nodes.question_generator import QuestionGenerator
-from haystack.schema import Document
+from farm_haystack.nodes.question_generator import QuestionGenerator
+from farm_haystack.schema import Document
 
 
 text = (

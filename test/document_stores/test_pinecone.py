@@ -6,16 +6,16 @@ from unittest.mock import MagicMock
 import numpy as np
 import pytest
 
-from haystack.document_stores.pinecone import (
+from farm_haystack.document_stores.pinecone import (
     DOCUMENT_WITH_EMBEDDING,
     DOCUMENT_WITHOUT_EMBEDDING,
     TYPE_METADATA_FIELD,
     PineconeDocumentStore,
     pinecone,
 )
-from haystack.errors import FilterError, PineconeDocumentStoreError
-from haystack.schema import Document
-from haystack.testing import DocumentStoreBaseTestAbstract
+from farm_haystack.errors import FilterError, PineconeDocumentStoreError
+from farm_haystack.schema import Document
+from farm_haystack.testing import DocumentStoreBaseTestAbstract
 
 from ..conftest import MockBaseRetriever
 from ..mocks import pinecone as pinecone_mock

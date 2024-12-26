@@ -3,8 +3,8 @@ from unittest.mock import MagicMock
 
 import numpy as np
 import pytest
-from haystack.document_stores.search_engine import SearchEngineDocumentStore
-from haystack.schema import Document, FilterType
+from farm_haystack.document_stores.search_engine import SearchEngineDocumentStore
+from farm_haystack.schema import Document, FilterType
 
 
 @pytest.mark.unit

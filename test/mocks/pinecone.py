@@ -1,7 +1,7 @@
 import logging
 from typing import Any, Dict, List, Optional, Union
 
-from haystack.schema import FilterType
+from farm_haystack.schema import FilterType
 
 logger = logging.getLogger(__name__)
 

@@ -4,9 +4,9 @@ import os
 import logging
 from pathlib import Path
 
-from haystack.pipelines.base import Pipeline
-from haystack.document_stores import FAISSDocumentStore, InMemoryDocumentStore
-from haystack.errors import PipelineConfigError
+from farm_haystack.pipelines.base import Pipeline
+from farm_haystack.document_stores import FAISSDocumentStore, InMemoryDocumentStore
+from farm_haystack.errors import PipelineConfigError
 
 from rest_api.controller.utils import RequestLimiter
 

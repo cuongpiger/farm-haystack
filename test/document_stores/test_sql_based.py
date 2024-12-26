@@ -1,10 +1,10 @@
 import pytest
 import numpy as np
 
-from haystack.schema import Document
-from haystack.pipelines import DocumentSearchPipeline
+from farm_haystack.schema import Document
+from farm_haystack.pipelines import DocumentSearchPipeline
 
-from haystack.pipelines import Pipeline
+from farm_haystack.pipelines import Pipeline
 
 
 DOCUMENTS = [

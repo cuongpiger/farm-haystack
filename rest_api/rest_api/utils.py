@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException, APIRouter
 from fastapi.routing import APIRoute
 from fastapi.openapi.utils import get_openapi
 from starlette.middleware.cors import CORSMiddleware
-from haystack import __version__ as haystack_version
+from farm_haystack import __version__ as haystack_version
 
 from rest_api.pipeline import setup_pipelines
 from rest_api.controller.errors.http_error import http_error_handler

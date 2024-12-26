@@ -5,7 +5,7 @@ from pathlib import Path
 import pytest
 from transformers import AutoTokenizer
 
-from haystack.modeling.data_handler.processor import SquadProcessor, _is_json
+from farm_haystack.modeling.data_handler.processor import SquadProcessor, _is_json
 import contextlib
 
 
@@ -199,7 +199,7 @@ def test_dataset_from_dicts_qa_inference(samples_path, caplog=None):
 
 
 def test_batch_encoding_flatten_rename():
-    from haystack.modeling.data_handler.dataset import flatten_rename
+    from farm_haystack.modeling.data_handler.dataset import flatten_rename
 
     tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
     batch_sentences = ["Hello I'm a single sentence", "And another sentence", "And the very very last one"]

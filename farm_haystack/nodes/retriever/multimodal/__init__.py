@@ -1,0 +1,2 @@
+from farm_haystack.nodes.retriever.multimodal.retriever import MultiModalRetriever
+from farm_haystack.nodes.retriever.multimodal.embedder import MultiModalEmbedder

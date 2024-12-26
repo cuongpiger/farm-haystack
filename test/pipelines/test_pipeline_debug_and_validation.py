@@ -3,8 +3,8 @@ from pathlib import Path
 import json
 import pytest
 
-from haystack.pipelines import Pipeline, RootNode, DocumentSearchPipeline
-from haystack.nodes import FARMReader, BM25Retriever, JoinDocuments
+from farm_haystack.pipelines import Pipeline, RootNode, DocumentSearchPipeline
+from farm_haystack.nodes import FARMReader, BM25Retriever, JoinDocuments
 
 from ..conftest import MockRetriever as BaseMockRetriever, MockReader
 

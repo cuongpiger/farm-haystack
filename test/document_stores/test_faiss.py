@@ -2,10 +2,10 @@ import faiss
 import pytest
 import numpy as np
 
-from haystack.document_stores.faiss import FAISSDocumentStore
-from haystack.testing import DocumentStoreBaseTestAbstract
+from farm_haystack.document_stores.faiss import FAISSDocumentStore
+from farm_haystack.testing import DocumentStoreBaseTestAbstract
 
-from haystack.pipelines import Pipeline
+from farm_haystack.pipelines import Pipeline
 
 from ..conftest import MockDenseRetriever
 

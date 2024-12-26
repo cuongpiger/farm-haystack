@@ -3,7 +3,7 @@ from unittest.mock import patch, Mock
 import pytest
 import requests
 
-from haystack.utils.requests_utils import request_with_retry
+from farm_haystack.utils.requests_utils import request_with_retry
 
 
 @pytest.mark.unit

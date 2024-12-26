@@ -9,9 +9,9 @@ import numpy as np
 
 from responses import matchers
 
-from haystack.document_stores import DeepsetCloudDocumentStore
-from haystack.utils import DeepsetCloudError
-from haystack.schema import Document, Label, Answer
+from farm_haystack.document_stores import DeepsetCloudDocumentStore
+from farm_haystack.utils import DeepsetCloudError
+from farm_haystack.schema import Document, Label, Answer
 
 
 DC_API_ENDPOINT = "https://dc.example.com/v1"

@@ -4,8 +4,8 @@ import json
 import logging
 
 from fastapi import FastAPI, APIRouter
-from haystack.schema import Label, Span
-from haystack.document_stores import BaseDocumentStore
+from farm_haystack.schema import Label, Span
+from farm_haystack.document_stores import BaseDocumentStore
 from rest_api.schema import FilterRequest, CreateLabelSerialized
 from rest_api.utils import get_app, get_pipelines
 

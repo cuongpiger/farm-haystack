@@ -1,7 +1,7 @@
 import pytest
 
-from haystack.nodes.prompt.prompt_model import PromptModelInvocationLayer
-from haystack.nodes.prompt.invocation_layer import HFLocalInvocationLayer, HFInferenceEndpointInvocationLayer
+from farm_haystack.nodes.prompt.prompt_model import PromptModelInvocationLayer
+from farm_haystack.nodes.prompt.invocation_layer import HFLocalInvocationLayer, HFInferenceEndpointInvocationLayer
 
 
 @pytest.mark.unit

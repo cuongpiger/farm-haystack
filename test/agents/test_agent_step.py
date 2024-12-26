@@ -1,8 +1,8 @@
 import pytest
 
-from haystack import Answer
-from haystack.agents import AgentStep
-from haystack.errors import AgentError
+from farm_haystack import Answer
+from farm_haystack.agents import AgentStep
+from farm_haystack.errors import AgentError
 
 
 @pytest.fixture

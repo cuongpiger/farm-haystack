@@ -1,7 +1,7 @@
 import pytest
 
-from haystack.schema import Answer
-from haystack.nodes import JoinAnswers
+from farm_haystack.schema import Answer
+from farm_haystack.nodes import JoinAnswers
 
 
 @pytest.mark.unit

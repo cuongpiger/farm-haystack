@@ -5,9 +5,9 @@ import datetime
 import traceback
 from typing import Dict
 
-from haystack.nodes import BaseRetriever, BaseReader
-from haystack import Pipeline
-from haystack.utils import aggregate_labels
+from farm_haystack.nodes import BaseRetriever, BaseReader
+from farm_haystack import Pipeline
+from farm_haystack.utils import aggregate_labels
 
 from retriever import benchmark_indexing
 from utils import load_eval_data, get_reader_config, get_retriever_config

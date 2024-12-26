@@ -15,8 +15,8 @@ import posthog
 import numpy as np
 import pytest
 
-from haystack import Answer, BaseComponent, __version__ as haystack_version
-from haystack.document_stores import (
+from farm_haystack import Answer, BaseComponent, __version__ as haystack_version
+from farm_haystack.document_stores import (
     BaseDocumentStore,
     InMemoryDocumentStore,
     ElasticsearchDocumentStore,
@@ -25,7 +25,7 @@ from haystack.document_stores import (
     OpenSearchDocumentStore,
     FAISSDocumentStore,
 )
-from haystack.nodes import (
+from farm_haystack.nodes import (
     BaseReader,
     BaseRetriever,
     BaseSummarizer,
@@ -45,8 +45,8 @@ from haystack.nodes import (
     QuestionGenerator,
     PromptTemplate,
 )
-from haystack.nodes.prompt import PromptNode
-from haystack.schema import Document, FilterType, MultiLabel, Label, Span
+from farm_haystack.nodes.prompt import PromptNode
+from farm_haystack.schema import Document, FilterType, MultiLabel, Label, Span
 
 from .mocks import pinecone as pinecone_mock
 

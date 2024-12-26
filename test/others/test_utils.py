@@ -11,14 +11,14 @@ from responses import matchers
 
 import _pytest
 
-from haystack.schema import Answer, Document, Span, Label
-from haystack.utils import print_answers
-from haystack.utils.deepsetcloud import DeepsetCloud, DeepsetCloudExperiments
-from haystack.utils.import_utils import get_filename_extension_from_url
-from haystack.utils.labels import aggregate_labels
-from haystack.utils.preprocessing import convert_files_to_docs, tika_convert_files_to_docs
-from haystack.utils.cleaning import clean_wiki_text
-from haystack.utils.context_matching import calculate_context_similarity, match_context, match_contexts
+from farm_haystack.schema import Answer, Document, Span, Label
+from farm_haystack.utils import print_answers
+from farm_haystack.utils.deepsetcloud import DeepsetCloud, DeepsetCloudExperiments
+from farm_haystack.utils.import_utils import get_filename_extension_from_url
+from farm_haystack.utils.labels import aggregate_labels
+from farm_haystack.utils.preprocessing import convert_files_to_docs, tika_convert_files_to_docs
+from farm_haystack.utils.cleaning import clean_wiki_text
+from farm_haystack.utils.context_matching import calculate_context_similarity, match_context, match_contexts
 
 from .. import conftest
 from ..conftest import DC_API_ENDPOINT, DC_API_KEY, MOCK_DC, deepset_cloud_fixture, fail_at_version
@@ -1377,9 +1377,9 @@ def test_secure_model_loading(monkeypatch, caplog):
     monkeypatch.setenv("TORCH_FORCE_WEIGHTS_ONLY_LOAD", "0")
 
     # now testing if just importing haystack is enough to enable secure loading of pytorch models
-    import haystack
+    import farm_haystack
 
-    importlib.reload(haystack)
+    importlib.reload(farm_haystack)
     assert "already set to" in caplog.text
 
 

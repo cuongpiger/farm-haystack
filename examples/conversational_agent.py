@@ -1,11 +1,11 @@
 import os
 
-from haystack.agents.base import Tool
-from haystack.agents.conversational import ConversationalAgent
-from haystack.agents.memory import ConversationSummaryMemory
-from haystack.nodes import PromptNode, WebRetriever, PromptTemplate
-from haystack.pipelines import WebQAPipeline
-from haystack.agents.types import Color
+from farm_haystack.agents.base import Tool
+from farm_haystack.agents.conversational import ConversationalAgent
+from farm_haystack.agents.memory import ConversationSummaryMemory
+from farm_haystack.nodes import PromptNode, WebRetriever, PromptTemplate
+from farm_haystack.pipelines import WebQAPipeline
+from farm_haystack.agents.types import Color
 
 search_api_key = os.environ.get("SEARCH_API_KEY")
 if not search_api_key:

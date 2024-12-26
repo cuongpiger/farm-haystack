@@ -6,13 +6,13 @@ from unittest.mock import patch, MagicMock
 import pytest
 import prompthub
 
-from haystack.nodes.prompt import PromptTemplate
-from haystack.nodes.prompt.prompt_node import PromptNode
-from haystack.nodes.prompt.prompt_template import PromptTemplateValidationError, LEGACY_DEFAULT_TEMPLATES
-from haystack.nodes.prompt import prompt_template
-from haystack.nodes.prompt.shapers import AnswerParser
-from haystack.pipelines.base import Pipeline
-from haystack.schema import Answer, Document
+from farm_haystack.nodes.prompt import PromptTemplate
+from farm_haystack.nodes.prompt.prompt_node import PromptNode
+from farm_haystack.nodes.prompt.prompt_template import PromptTemplateValidationError, LEGACY_DEFAULT_TEMPLATES
+from farm_haystack.nodes.prompt import prompt_template
+from farm_haystack.nodes.prompt.shapers import AnswerParser
+from farm_haystack.pipelines.base import Pipeline
+from farm_haystack.schema import Answer, Document
 
 
 @pytest.fixture

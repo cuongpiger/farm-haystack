@@ -3,10 +3,10 @@ from unittest.mock import patch
 import logging
 
 import torch
-import haystack
-from haystack.utils.torch_utils import ListDataset
-from haystack.schema import Document
-from haystack.nodes import TransformersSummarizer
+import farm_haystack
+from farm_haystack.utils.torch_utils import ListDataset
+from farm_haystack.schema import Document
+from farm_haystack.nodes import TransformersSummarizer
 
 
 DOCS = [Document(content=doc) for doc in ["First test doc", "Second test doc"]]
@@ -32,7 +32,7 @@ class MockHFPipeline:
 
 @pytest.fixture
 def mock_models(monkeypatch):
-    monkeypatch.setattr(haystack.nodes.summarizer.transformers, "pipeline", MockHFPipeline)
+    monkeypatch.setattr(farm_haystack.nodes.summarizer.transformers, "pipeline", MockHFPipeline)
 
 
 @pytest.fixture

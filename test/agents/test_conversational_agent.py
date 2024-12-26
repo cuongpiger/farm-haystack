@@ -1,11 +1,11 @@
 import pytest
 from unittest.mock import MagicMock, patch
 
-from haystack.errors import AgentError
-from haystack.agents.base import Tool
-from haystack.agents.conversational import ConversationalAgent
-from haystack.agents.memory import ConversationSummaryMemory, ConversationMemory, NoMemory
-from haystack.nodes import PromptNode
+from farm_haystack.errors import AgentError
+from farm_haystack.agents.base import Tool
+from farm_haystack.agents.conversational import ConversationalAgent
+from farm_haystack.agents.memory import ConversationSummaryMemory, ConversationMemory, NoMemory
+from farm_haystack.nodes import PromptNode
 
 
 @pytest.fixture

@@ -1,7 +1,7 @@
 import pytest
 
-from haystack import Document
-from haystack.nodes.ranker.lost_in_the_middle import LostInTheMiddleRanker
+from farm_haystack import Document
+from farm_haystack.nodes.ranker.lost_in_the_middle import LostInTheMiddleRanker
 
 
 @pytest.mark.unit

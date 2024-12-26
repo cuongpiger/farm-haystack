@@ -6,11 +6,11 @@ import copy
 from unittest.mock import patch
 
 import torch
-from haystack.schema import Document
-from haystack.nodes.ranker.base import BaseRanker
-from haystack.nodes.ranker import SentenceTransformersRanker, CohereRanker
-from haystack.nodes.ranker.recentness_ranker import RecentnessRanker
-from haystack.errors import HaystackError, NodeError
+from farm_haystack.schema import Document
+from farm_haystack.nodes.ranker.base import BaseRanker
+from farm_haystack.nodes.ranker import SentenceTransformersRanker, CohereRanker
+from farm_haystack.nodes.ranker.recentness_ranker import RecentnessRanker
+from farm_haystack.errors import HaystackError, NodeError
 
 
 @pytest.fixture

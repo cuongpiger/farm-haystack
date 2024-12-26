@@ -1,0 +1,2 @@
+from farm_haystack.nodes.doc_language_classifier.langdetect import LangdetectDocumentLanguageClassifier
+from farm_haystack.nodes.doc_language_classifier.transformers import TransformersDocumentLanguageClassifier

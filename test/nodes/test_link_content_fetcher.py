@@ -5,8 +5,8 @@ import pytest
 import requests
 from requests import Response
 
-from haystack import Document
-from haystack.nodes import LinkContentFetcher
+from farm_haystack import Document
+from farm_haystack.nodes import LinkContentFetcher
 
 
 @pytest.fixture

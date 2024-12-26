@@ -1,6 +1,6 @@
 import pytest
 
-from haystack.modeling.infer import Inferencer
+from farm_haystack.modeling.infer import Inferencer
 
 
 @pytest.mark.parametrize("multiprocessing_chunksize", [None, 2])

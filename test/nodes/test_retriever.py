@@ -16,24 +16,24 @@ from transformers import PreTrainedTokenizerFast
 try:
     from elasticsearch import Elasticsearch
 except (ImportError, ModuleNotFoundError) as ie:
-    from haystack.utils.import_utils import _optional_component_not_installed
+    from farm_haystack.utils.import_utils import _optional_component_not_installed
 
     _optional_component_not_installed(__name__, "elasticsearch", ie)
 
 
-from haystack.document_stores.base import BaseDocumentStore, FilterType, KeywordDocumentStore
-from haystack.document_stores.memory import InMemoryDocumentStore
-from haystack.document_stores import WeaviateDocumentStore
-from haystack.nodes.retriever.base import BaseRetriever
-from haystack.nodes.retriever.web import WebRetriever
-from haystack.nodes.search_engine import WebSearch
-from haystack.pipelines import DocumentSearchPipeline
-from haystack.schema import Document
-from haystack.document_stores.elasticsearch import ElasticsearchDocumentStore
-from haystack.nodes.retriever.dense import DensePassageRetriever, EmbeddingRetriever, TableTextRetriever
-from haystack.nodes.retriever.sparse import BM25Retriever, FilterRetriever, TfidfRetriever
-from haystack.nodes.retriever.multimodal import MultiModalRetriever
-from haystack.nodes.retriever._openai_encoder import _OpenAIEmbeddingEncoder
+from farm_haystack.document_stores.base import BaseDocumentStore, FilterType, KeywordDocumentStore
+from farm_haystack.document_stores.memory import InMemoryDocumentStore
+from farm_haystack.document_stores import WeaviateDocumentStore
+from farm_haystack.nodes.retriever.base import BaseRetriever
+from farm_haystack.nodes.retriever.web import WebRetriever
+from farm_haystack.nodes.search_engine import WebSearch
+from farm_haystack.pipelines import DocumentSearchPipeline
+from farm_haystack.schema import Document
+from farm_haystack.document_stores.elasticsearch import ElasticsearchDocumentStore
+from farm_haystack.nodes.retriever.dense import DensePassageRetriever, EmbeddingRetriever, TableTextRetriever
+from farm_haystack.nodes.retriever.sparse import BM25Retriever, FilterRetriever, TfidfRetriever
+from farm_haystack.nodes.retriever.multimodal import MultiModalRetriever
+from farm_haystack.nodes.retriever._openai_encoder import _OpenAIEmbeddingEncoder
 
 from ..conftest import MockBaseRetriever, fail_at_version
 

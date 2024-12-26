@@ -3,8 +3,8 @@ from unittest.mock import Mock
 
 import pytest
 
-from haystack.nodes.prompt.invocation_layer.handlers import DefaultTokenStreamingHandler
-from haystack.nodes.prompt.invocation_layer import CohereInvocationLayer
+from farm_haystack.nodes.prompt.invocation_layer.handlers import DefaultTokenStreamingHandler
+from farm_haystack.nodes.prompt.invocation_layer import CohereInvocationLayer
 
 
 @pytest.mark.unit

@@ -1,8 +1,8 @@
 import pytest
 import logging
 
-from haystack.schema import Document
-from haystack.nodes.doc_language_classifier import (
+from farm_haystack.schema import Document
+from farm_haystack.nodes.doc_language_classifier import (
     LangdetectDocumentLanguageClassifier,
     TransformersDocumentLanguageClassifier,
 )

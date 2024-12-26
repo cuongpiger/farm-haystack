@@ -1,9 +1,9 @@
 import pytest
 
-from haystack import Document
-from haystack.nodes.image_to_text.transformers import TransformersImageToText
-from haystack.nodes.image_to_text.base import BaseImageToText
-from haystack.errors import ImageToTextError
+from farm_haystack import Document
+from farm_haystack.nodes.image_to_text.transformers import TransformersImageToText
+from farm_haystack.nodes.image_to_text.base import BaseImageToText
+from farm_haystack.errors import ImageToTextError
 
 
 @pytest.fixture

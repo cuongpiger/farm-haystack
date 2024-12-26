@@ -1,9 +1,9 @@
 import math
 import pytest
 
-from haystack.pipelines import Pipeline, RootNode
-from haystack.document_stores import InMemoryDocumentStore
-from haystack.nodes import DensePassageRetriever, BM25Retriever, TransformersQueryClassifier, JoinDocuments, FARMReader
+from farm_haystack.pipelines import Pipeline, RootNode
+from farm_haystack.document_stores import InMemoryDocumentStore
+from farm_haystack.nodes import DensePassageRetriever, BM25Retriever, TransformersQueryClassifier, JoinDocuments, FARMReader
 
 
 @pytest.mark.parametrize("classifier", [TransformersQueryClassifier()])

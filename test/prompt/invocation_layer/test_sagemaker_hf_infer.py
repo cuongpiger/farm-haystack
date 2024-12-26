@@ -3,10 +3,10 @@ from unittest.mock import patch, MagicMock, Mock
 
 import pytest
 
-from haystack.lazy_imports import LazyImport
+from farm_haystack.lazy_imports import LazyImport
 
-from haystack.errors import SageMakerConfigurationError
-from haystack.nodes.prompt.invocation_layer import SageMakerHFInferenceInvocationLayer
+from farm_haystack.errors import SageMakerConfigurationError
+from farm_haystack.nodes.prompt.invocation_layer import SageMakerHFInferenceInvocationLayer
 
 with LazyImport() as boto3_import:
     from botocore.exceptions import BotoCoreError

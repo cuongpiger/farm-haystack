@@ -3,24 +3,24 @@ import logging
 
 import pytest
 
-import haystack
-from haystack import Pipeline, Document, Answer
-from haystack.document_stores.memory import InMemoryDocumentStore
-from haystack.nodes.other.shaper import Shaper
-from haystack.nodes.retriever.sparse import BM25Retriever
+import farm_haystack
+from farm_haystack import Pipeline, Document, Answer
+from farm_haystack.document_stores.memory import InMemoryDocumentStore
+from farm_haystack.nodes.other.shaper import Shaper
+from farm_haystack.nodes.retriever.sparse import BM25Retriever
 
 
 @pytest.fixture
 def mock_function(monkeypatch):
     monkeypatch.setattr(
-        haystack.nodes.other.shaper, "REGISTERED_FUNCTIONS", {"test_function": lambda a, b: [a] * len(b)}
+        farm_haystack.nodes.other.shaper, "REGISTERED_FUNCTIONS", {"test_function": lambda a, b: [a] * len(b)}
     )
 
 
 @pytest.fixture
 def mock_function_two_outputs(monkeypatch):
     monkeypatch.setattr(
-        haystack.nodes.other.shaper, "REGISTERED_FUNCTIONS", {"two_output_test_function": lambda a: (a, len(a))}
+        farm_haystack.nodes.other.shaper, "REGISTERED_FUNCTIONS", {"two_output_test_function": lambda a: (a, len(a))}
     )
 
 

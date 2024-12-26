@@ -4,8 +4,8 @@ from unittest.mock import patch, MagicMock
 
 import pytest
 
-from haystack.nodes.prompt.invocation_layer.handlers import DefaultTokenStreamingHandler, TokenStreamingHandler
-from haystack.nodes.prompt.invocation_layer import HFInferenceEndpointInvocationLayer
+from farm_haystack.nodes.prompt.invocation_layer.handlers import DefaultTokenStreamingHandler, TokenStreamingHandler
+from farm_haystack.nodes.prompt.invocation_layer import HFInferenceEndpointInvocationLayer
 
 
 @pytest.fixture

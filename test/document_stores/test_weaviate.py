@@ -6,10 +6,10 @@ import numpy as np
 import pytest
 import weaviate
 
-from haystack.document_stores.weaviate import WeaviateDocumentStore
-from haystack.schema import Document
-from haystack.testing import DocumentStoreBaseTestAbstract
-from haystack.nodes.preprocessor import PreProcessor
+from farm_haystack.document_stores.weaviate import WeaviateDocumentStore
+from farm_haystack.schema import Document
+from farm_haystack.testing import DocumentStoreBaseTestAbstract
+from farm_haystack.nodes.preprocessor import PreProcessor
 
 embedding_dim = 768
 

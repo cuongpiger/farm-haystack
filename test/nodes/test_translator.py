@@ -1,8 +1,8 @@
 import pytest
 
-import haystack
-from haystack.schema import Document
-from haystack.nodes import TransformersTranslator
+import farm_haystack
+from farm_haystack.schema import Document
+from farm_haystack.nodes import TransformersTranslator
 
 
 ORIGINAL_TEXT = "TEST QUERY"
@@ -38,8 +38,8 @@ class MockModel:
 
 @pytest.fixture
 def mock_models(monkeypatch):
-    monkeypatch.setattr(haystack.nodes.translator.transformers, "AutoModelForSeq2SeqLM", MockModel)
-    monkeypatch.setattr(haystack.nodes.translator.transformers, "AutoTokenizer", MockTokenizer)
+    monkeypatch.setattr(farm_haystack.nodes.translator.transformers, "AutoModelForSeq2SeqLM", MockModel)
+    monkeypatch.setattr(farm_haystack.nodes.translator.transformers, "AutoTokenizer", MockTokenizer)
 
 
 @pytest.fixture

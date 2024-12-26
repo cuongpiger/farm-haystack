@@ -13,17 +13,17 @@ import responses
 import logging
 import yaml
 
-from haystack import __version__
-from haystack.document_stores.deepsetcloud import DeepsetCloudDocumentStore
-from haystack.document_stores.elasticsearch import ElasticsearchDocumentStore
-from haystack.document_stores.memory import InMemoryDocumentStore
-from haystack.nodes.file_classifier.file_type import FileTypeClassifier
-from haystack.nodes.other.join_docs import JoinDocuments
-from haystack.nodes.base import BaseComponent
-from haystack.nodes.retriever.sparse import BM25Retriever
-from haystack.nodes.retriever.sparse import FilterRetriever
-from haystack.nodes import Shaper
-from haystack.pipelines import (
+from farm_haystack import __version__
+from farm_haystack.document_stores.deepsetcloud import DeepsetCloudDocumentStore
+from farm_haystack.document_stores.elasticsearch import ElasticsearchDocumentStore
+from farm_haystack.document_stores.memory import InMemoryDocumentStore
+from farm_haystack.nodes.file_classifier.file_type import FileTypeClassifier
+from farm_haystack.nodes.other.join_docs import JoinDocuments
+from farm_haystack.nodes.base import BaseComponent
+from farm_haystack.nodes.retriever.sparse import BM25Retriever
+from farm_haystack.nodes.retriever.sparse import FilterRetriever
+from farm_haystack.nodes import Shaper
+from farm_haystack.pipelines import (
     Pipeline,
     RootNode,
     FAQPipeline,
@@ -36,12 +36,12 @@ from haystack.pipelines import (
     QuestionGenerationPipeline,
     MostSimilarDocumentsPipeline,
 )
-from haystack.pipelines.config import get_component_definitions
-from haystack.pipelines.utils import generate_code
-from haystack.errors import PipelineConfigError
-from haystack.nodes import PreProcessor, TextConverter
-from haystack.utils.deepsetcloud import DeepsetCloudError
-from haystack import Answer, Document
+from farm_haystack.pipelines.config import get_component_definitions
+from farm_haystack.pipelines.utils import generate_code
+from farm_haystack.errors import PipelineConfigError
+from farm_haystack.nodes import PreProcessor, TextConverter
+from farm_haystack.utils.deepsetcloud import DeepsetCloudError
+from farm_haystack import Answer, Document
 
 from ..conftest import (
     MOCK_DC,

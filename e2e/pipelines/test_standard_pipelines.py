@@ -3,9 +3,9 @@ import asyncio
 
 import pytest
 
-from haystack.document_stores import InMemoryDocumentStore, ElasticsearchDocumentStore
-from haystack.nodes.retriever.web import WebRetriever
-from haystack.pipelines import (
+from farm_haystack.document_stores import InMemoryDocumentStore, ElasticsearchDocumentStore
+from farm_haystack.nodes.retriever.web import WebRetriever
+from farm_haystack.pipelines import (
     Pipeline,
     FAQPipeline,
     DocumentSearchPipeline,
@@ -13,9 +13,9 @@ from haystack.pipelines import (
     WebQAPipeline,
     SearchSummarizationPipeline,
 )
-from haystack.nodes import EmbeddingRetriever, PromptNode, BM25Retriever, TransformersSummarizer
-from haystack.nodes.asyncio.sleeper import Sleeper  # noqa # pylint: disable=unused-import
-from haystack.schema import Document
+from farm_haystack.nodes import EmbeddingRetriever, PromptNode, BM25Retriever, TransformersSummarizer
+from farm_haystack.nodes.asyncio.sleeper import Sleeper  # noqa # pylint: disable=unused-import
+from farm_haystack.schema import Document
 
 
 def test_faq_pipeline():

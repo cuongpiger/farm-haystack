@@ -6,8 +6,8 @@ from numpy import loadtxt
 
 import pytest
 
-from haystack.schema import Document
-from haystack.nodes import SentenceTransformersRanker, TopPSampler, TransformersDocumentClassifier
+from farm_haystack.schema import Document
+from farm_haystack.nodes import SentenceTransformersRanker, TopPSampler, TransformersDocumentClassifier
 
 
 @pytest.fixture

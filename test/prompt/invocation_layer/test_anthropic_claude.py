@@ -4,8 +4,8 @@ import os
 
 import pytest
 
-from haystack.nodes.prompt.invocation_layer.handlers import DefaultTokenStreamingHandler
-from haystack.nodes.prompt.invocation_layer import AnthropicClaudeInvocationLayer
+from farm_haystack.nodes.prompt.invocation_layer.handlers import DefaultTokenStreamingHandler
+from farm_haystack.nodes.prompt.invocation_layer import AnthropicClaudeInvocationLayer
 
 
 @pytest.fixture

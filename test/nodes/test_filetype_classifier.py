@@ -6,8 +6,8 @@ from pathlib import Path
 
 import pytest
 
-import haystack
-from haystack.nodes.file_classifier.file_type import FileTypeClassifier, DEFAULT_TYPES, DEFAULT_MEDIA_TYPES
+import farm_haystack
+from farm_haystack.nodes.file_classifier.file_type import FileTypeClassifier, DEFAULT_TYPES, DEFAULT_MEDIA_TYPES
 import contextlib
 
 
@@ -95,7 +95,7 @@ def test_filetype_classifier_other_files_without_extension(samples_path):
 @pytest.mark.unit
 def test_filetype_classifier_text_files_without_extension_no_magic(monkeypatch, caplog, samples_path):
     with contextlib.suppress(AttributeError):  # only monkeypatch if magic is installed
-        monkeypatch.delattr(haystack.nodes.file_classifier.file_type, "magic")
+        monkeypatch.delattr(farm_haystack.nodes.file_classifier.file_type, "magic")
 
     node = FileTypeClassifier(supported_types=[""])
 

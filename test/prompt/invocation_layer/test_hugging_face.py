@@ -7,9 +7,9 @@ import torch
 from torch import device
 from transformers import AutoTokenizer, BloomForCausalLM, StoppingCriteriaList, GenerationConfig
 
-from haystack.nodes.prompt.invocation_layer import HFLocalInvocationLayer
-from haystack.nodes.prompt.invocation_layer.handlers import HFTokenStreamingHandler, DefaultTokenStreamingHandler
-from haystack.nodes.prompt.invocation_layer.hugging_face import StopWordsCriteria
+from farm_haystack.nodes.prompt.invocation_layer import HFLocalInvocationLayer
+from farm_haystack.nodes.prompt.invocation_layer.handlers import HFTokenStreamingHandler, DefaultTokenStreamingHandler
+from farm_haystack.nodes.prompt.invocation_layer.hugging_face import StopWordsCriteria
 
 
 @pytest.fixture

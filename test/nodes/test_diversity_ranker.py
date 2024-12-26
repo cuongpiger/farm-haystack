@@ -2,8 +2,8 @@ from typing import List
 
 import pytest
 
-from haystack import Document
-from haystack.nodes.ranker.diversity import DiversityRanker
+from farm_haystack import Document
+from farm_haystack.nodes.ranker.diversity import DiversityRanker
 
 
 # Tests that predict method returns a list of Document objects

@@ -1,6 +1,6 @@
 import json
 
-from haystack.schema import Document, EvaluationResult, Label, Answer, Span, MultiLabel, TableCell, _dict_factory
+from farm_haystack.schema import Document, EvaluationResult, Label, Answer, Span, MultiLabel, TableCell, _dict_factory
 import pytest
 import numpy as np
 import pandas as pd

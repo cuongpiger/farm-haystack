@@ -1,6 +1,6 @@
 from unittest.mock import patch
 import pytest
-from haystack.nodes.query_classifier import TransformersQueryClassifier
+from farm_haystack.nodes.query_classifier import TransformersQueryClassifier
 
 
 @pytest.mark.unit

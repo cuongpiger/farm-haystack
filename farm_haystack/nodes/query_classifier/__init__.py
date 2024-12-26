@@ -1,0 +1,2 @@
+from farm_haystack.nodes.query_classifier.base import BaseQueryClassifier
+from farm_haystack.nodes.query_classifier.transformers import TransformersQueryClassifier

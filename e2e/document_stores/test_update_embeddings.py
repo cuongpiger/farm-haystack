@@ -2,7 +2,7 @@ import pytest
 import numpy as np
 import pandas as pd
 
-from haystack.nodes import EmbeddingRetriever, TableTextRetriever
+from farm_haystack.nodes import EmbeddingRetriever, TableTextRetriever
 
 from ..conftest import document_store
 

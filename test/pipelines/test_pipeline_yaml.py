@@ -9,12 +9,12 @@ from enum import Enum
 from pydantic.dataclasses import dataclass
 from typing import Any, Dict, List, Optional
 
-import haystack
-from haystack import Pipeline
-from haystack.nodes import _json_schema
-from haystack.nodes import FileTypeClassifier
-from haystack.errors import HaystackError, PipelineConfigError, PipelineSchemaError, DocumentStoreError
-from haystack.nodes.base import BaseComponent
+import farm_haystack
+from farm_haystack import Pipeline
+from farm_haystack.nodes import _json_schema
+from farm_haystack.nodes import FileTypeClassifier
+from farm_haystack.errors import HaystackError, PipelineConfigError, PipelineSchemaError, DocumentStoreError
+from farm_haystack.nodes.base import BaseComponent
 
 from ..conftest import MockNode, MockDocumentStore, MockReader, MockRetriever
 from .. import conftest
@@ -36,12 +36,12 @@ def mock_json_schema(request, monkeypatch, tmp_path):
 
     # Mock the subclasses list to make it very small, containing only mock nodes
     monkeypatch.setattr(
-        haystack.nodes._json_schema,
+        farm_haystack.nodes._json_schema,
         "find_subclasses_in_modules",
         lambda *a, **k: [(conftest, MockDocumentStore), (conftest, MockReader), (conftest, MockRetriever)],
     )
     # Point the JSON schema path to tmp_path
-    monkeypatch.setattr(haystack.nodes._json_schema, "JSON_SCHEMAS_PATH", tmp_path)
+    monkeypatch.setattr(farm_haystack.nodes._json_schema, "JSON_SCHEMAS_PATH", tmp_path)
 
     # Generate mock schema in tmp_path
     filename = "haystack-pipeline-main.schema.json"
@@ -236,7 +236,7 @@ def test_load_yaml_non_existing_version(tmp_path, caplog):
     with caplog.at_level(logging.WARNING):
         Pipeline.load_from_yaml(path=tmp_path / "tmp_config.yml")
         assert "version 'random'" in caplog.text
-        assert f"Haystack {haystack.__version__}" in caplog.text
+        assert f"Haystack {farm_haystack.__version__}" in caplog.text
 
 
 @pytest.mark.unit
@@ -280,7 +280,7 @@ def test_load_yaml_incompatible_version(tmp_path, caplog):
     with caplog.at_level(logging.WARNING):
         Pipeline.load_from_yaml(path=tmp_path / "tmp_config.yml")
         assert "version '1.1.0'" in caplog.text
-        assert f"Haystack {haystack.__version__}" in caplog.text
+        assert f"Haystack {farm_haystack.__version__}" in caplog.text
 
 
 @pytest.mark.unit
@@ -1155,7 +1155,7 @@ def test_save_yaml(tmp_path):
         assert content.count("retriever") == 2
         assert "MockRetriever" in content
         assert "Query" in content
-        assert f"version: {haystack.__version__}" in content
+        assert f"version: {farm_haystack.__version__}" in content
 
 
 @pytest.mark.unit

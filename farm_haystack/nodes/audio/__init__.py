@@ -1,0 +1,1 @@
+from farm_haystack.nodes.audio.whisper_transcriber import WhisperTranscriber, WhisperModel

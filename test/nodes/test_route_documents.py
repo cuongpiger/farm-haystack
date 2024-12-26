@@ -1,8 +1,8 @@
 import pytest
 import pandas as pd
 
-from haystack.schema import Document
-from haystack.nodes import RouteDocuments
+from farm_haystack.schema import Document
+from farm_haystack.nodes import RouteDocuments
 
 
 @pytest.fixture

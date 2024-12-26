@@ -3,7 +3,7 @@ import os
 
 import pytest
 
-from haystack.nodes.prompt import PromptModel
+from farm_haystack.nodes.prompt import PromptModel
 
 
 def create_mock_layer_that_supports(model_name, response=["fake_response"]):

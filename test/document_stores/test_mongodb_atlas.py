@@ -4,8 +4,8 @@ import pymongo
 import pytest
 from numpy import float32, random
 
-from haystack.document_stores import mongodb_atlas
-from haystack.document_stores.mongodb_atlas import MongoDBAtlasDocumentStore
+from farm_haystack.document_stores import mongodb_atlas
+from farm_haystack.document_stores.mongodb_atlas import MongoDBAtlasDocumentStore
 
 
 class TestMongoDBDocumentStore:

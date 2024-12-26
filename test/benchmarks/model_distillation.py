@@ -1,4 +1,4 @@
-from haystack.nodes import FARMReader
+from farm_haystack.nodes import FARMReader
 import json
 import requests
 from pathlib import Path

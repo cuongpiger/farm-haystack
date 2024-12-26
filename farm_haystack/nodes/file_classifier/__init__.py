@@ -1,0 +1,1 @@
+from farm_haystack.nodes.file_classifier.file_type import FileTypeClassifier

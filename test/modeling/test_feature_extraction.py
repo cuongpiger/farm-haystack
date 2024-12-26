@@ -3,9 +3,9 @@ from unittest.mock import MagicMock
 from unittest import mock
 from pathlib import Path
 
-import haystack
-from haystack.errors import ModelingError
-from haystack.modeling.model.feature_extraction import FeatureExtractor
+import farm_haystack
+from farm_haystack.errors import ModelingError
+from farm_haystack.modeling.model.feature_extraction import FeatureExtractor
 
 
 class MockedAutoTokenizer:
@@ -30,16 +30,16 @@ class MockedAutoConfig:
 @pytest.fixture()
 def mock_autotokenizer(monkeypatch):
     monkeypatch.setattr(
-        haystack.modeling.model.feature_extraction, "FEATURE_EXTRACTORS", {"mocked": MockedAutoTokenizer}
+        farm_haystack.modeling.model.feature_extraction, "FEATURE_EXTRACTORS", {"mocked": MockedAutoTokenizer}
     )
-    monkeypatch.setattr(haystack.modeling.model.feature_extraction, "AutoConfig", MockedAutoConfig)
-    monkeypatch.setattr(haystack.modeling.model.feature_extraction, "AutoTokenizer", MockedAutoTokenizer)
+    monkeypatch.setattr(farm_haystack.modeling.model.feature_extraction, "AutoConfig", MockedAutoConfig)
+    monkeypatch.setattr(farm_haystack.modeling.model.feature_extraction, "AutoTokenizer", MockedAutoTokenizer)
 
 
 @pytest.mark.unit
 def test_get_tokenizer_from_HF():
     with mock.patch("haystack.modeling.model.feature_extraction.AutoConfig") as mocked_ac:
-        from haystack.modeling.model.feature_extraction import FEATURE_EXTRACTORS
+        from farm_haystack.modeling.model.feature_extraction import FEATURE_EXTRACTORS
 
         FEATURE_EXTRACTORS["test"] = mock.MagicMock()
         FEATURE_EXTRACTORS["test"].__name__ = "Test"

@@ -1,6 +1,6 @@
 import os
-from haystack.nodes import PromptNode, LinkContentFetcher, PromptTemplate
-from haystack import Pipeline
+from farm_haystack.nodes import PromptNode, LinkContentFetcher, PromptTemplate
+from farm_haystack import Pipeline
 
 anthropic_key = os.environ.get("ANTHROPIC_API_KEY")
 if not anthropic_key:

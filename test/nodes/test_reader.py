@@ -7,11 +7,11 @@ import pytest
 
 import torch
 from huggingface_hub import snapshot_download
-from haystack.modeling.data_handler.inputs import QAInput, Question
+from farm_haystack.modeling.data_handler.inputs import QAInput, Question
 
-from haystack.schema import Document, Answer, Label, MultiLabel, Span
-from haystack.nodes.reader.base import BaseReader
-from haystack.nodes import FARMReader, TransformersReader
+from farm_haystack.schema import Document, Answer, Label, MultiLabel, Span
+from farm_haystack.nodes.reader.base import BaseReader
+from farm_haystack.nodes import FARMReader, TransformersReader
 
 
 def _joinpath(rootdir, targetdir):

@@ -7,23 +7,23 @@ import pandas as pd
 from copy import deepcopy
 
 import responses
-from haystack.document_stores.elasticsearch import ElasticsearchDocumentStore
-from haystack.nodes.preprocessor import PreProcessor
-from haystack.nodes.prompt.prompt_node import PromptNode
-from haystack.nodes.query_classifier.transformers import TransformersQueryClassifier
-from haystack.nodes.retriever.dense import DensePassageRetriever
-from haystack.nodes.retriever.sparse import BM25Retriever
-from haystack.nodes.summarizer.transformers import TransformersSummarizer
-from haystack.pipelines.base import Pipeline
-from haystack.pipelines import ExtractiveQAPipeline, SearchSummarizationPipeline
-from haystack.pipelines.standard_pipelines import (
+from farm_haystack.document_stores.elasticsearch import ElasticsearchDocumentStore
+from farm_haystack.nodes.preprocessor import PreProcessor
+from farm_haystack.nodes.prompt.prompt_node import PromptNode
+from farm_haystack.nodes.query_classifier.transformers import TransformersQueryClassifier
+from farm_haystack.nodes.retriever.dense import DensePassageRetriever
+from farm_haystack.nodes.retriever.sparse import BM25Retriever
+from farm_haystack.nodes.summarizer.transformers import TransformersSummarizer
+from farm_haystack.pipelines.base import Pipeline
+from farm_haystack.pipelines import ExtractiveQAPipeline, SearchSummarizationPipeline
+from farm_haystack.pipelines.standard_pipelines import (
     DocumentSearchPipeline,
     FAQPipeline,
     RetrieverQuestionGenerationPipeline,
     TranslationWrapperPipeline,
 )
-from haystack.nodes.translator.transformers import TransformersTranslator
-from haystack.schema import Answer, Document, EvaluationResult, Label, MultiLabel, Span, TableCell
+from farm_haystack.nodes.translator.transformers import TransformersTranslator
+from farm_haystack.schema import Answer, Document, EvaluationResult, Label, MultiLabel, Span, TableCell
 
 
 @pytest.mark.skipif(sys.platform in ["win32", "cygwin"], reason="Causes OOM on windows github runner")

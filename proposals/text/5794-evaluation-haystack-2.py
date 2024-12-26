@@ -7,12 +7,12 @@
 
 import os
 
-from haystack.preview import Pipeline
-from haystack.preview.dataclasses.document import Document
-from haystack.preview.components.retrievers.memory import MemoryBM25Retriever
-from haystack.preview.document_stores.memory import MemoryDocumentStore
-from haystack.preview.components.generators.openai.gpt35 import GPT35Generator
-from haystack.preview.components.builders.prompt_builder import PromptBuilder
+from farm_haystack.preview import Pipeline
+from farm_haystack.preview.dataclasses.document import Document
+from farm_haystack.preview.components.retrievers.memory import MemoryBM25Retriever
+from farm_haystack.preview.document_stores.memory import MemoryDocumentStore
+from farm_haystack.preview.components.generators.openai.gpt35 import GPT35Generator
+from farm_haystack.preview.components.builders.prompt_builder import PromptBuilder
 
 
 docstore = MemoryDocumentStore()

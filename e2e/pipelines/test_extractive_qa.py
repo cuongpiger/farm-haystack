@@ -1,6 +1,6 @@
-from haystack.nodes import TransformersTranslator, FARMReader, TfidfRetriever
-from haystack.pipelines import ExtractiveQAPipeline, TranslationWrapperPipeline
-from haystack.document_stores import InMemoryDocumentStore
+from farm_haystack.nodes import TransformersTranslator, FARMReader, TfidfRetriever
+from farm_haystack.pipelines import ExtractiveQAPipeline, TranslationWrapperPipeline
+from farm_haystack.document_stores import InMemoryDocumentStore
 
 
 def test_extractive_qa_answers_with_translator(docs):

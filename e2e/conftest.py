@@ -5,9 +5,9 @@ from pathlib import Path
 
 import pytest
 
-from haystack.schema import Document
-from haystack.modeling.utils import set_all_seeds
-from haystack.document_stores import (
+from farm_haystack.schema import Document
+from farm_haystack.modeling.utils import set_all_seeds
+from farm_haystack.document_stores import (
     InMemoryDocumentStore,
     ElasticsearchDocumentStore,
     WeaviateDocumentStore,

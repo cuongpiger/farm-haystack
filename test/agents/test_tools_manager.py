@@ -4,8 +4,8 @@ from unittest import mock
 
 import pytest
 
-from haystack import Pipeline, Answer, Document, BaseComponent, MultiLabel
-from haystack.agents.base import ToolsManager, Tool
+from farm_haystack import Pipeline, Answer, Document, BaseComponent, MultiLabel
+from farm_haystack.agents.base import ToolsManager, Tool
 
 
 @pytest.fixture

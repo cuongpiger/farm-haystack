@@ -1,6 +1,6 @@
 import pytest
 
-from haystack.modeling.model.language_model import (
+from farm_haystack.modeling.model.language_model import (
     get_language_model,
     HFLanguageModel,
     HFLanguageModelNoSegmentIds,

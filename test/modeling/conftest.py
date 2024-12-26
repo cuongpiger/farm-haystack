@@ -3,7 +3,7 @@ import logging
 import pytest
 import psutil
 
-from haystack.modeling.infer import Inferencer, QAInferencer
+from farm_haystack.modeling.infer import Inferencer, QAInferencer
 
 
 @pytest.fixture

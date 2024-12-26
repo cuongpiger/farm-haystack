@@ -6,10 +6,10 @@ import pytest
 from rank_bm25 import BM25
 import numpy as np
 
-from haystack.document_stores.memory import InMemoryDocumentStore
-from haystack.nodes import BM25Retriever
-from haystack.schema import Document
-from haystack.testing import DocumentStoreBaseTestAbstract
+from farm_haystack.document_stores.memory import InMemoryDocumentStore
+from farm_haystack.nodes import BM25Retriever
+from farm_haystack.schema import Document
+from farm_haystack.testing import DocumentStoreBaseTestAbstract
 
 
 class TestInMemoryDocumentStore(DocumentStoreBaseTestAbstract):

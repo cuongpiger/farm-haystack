@@ -3,9 +3,9 @@ import logging
 
 import pytest
 
-from haystack.document_stores.sql import LabelORM, SQLDocumentStore
-from haystack.schema import Document
-from haystack.testing import DocumentStoreBaseTestAbstract
+from farm_haystack.document_stores.sql import LabelORM, SQLDocumentStore
+from farm_haystack.schema import Document
+from farm_haystack.testing import DocumentStoreBaseTestAbstract
 
 
 class TestSQLDocumentStore(DocumentStoreBaseTestAbstract):

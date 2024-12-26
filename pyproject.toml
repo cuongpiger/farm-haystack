@@ -233,7 +233,7 @@ all-gpu = [
 ]
 
 [project.scripts]
-haystack = "haystack.cli.entry_point:main"
+haystack = "farm_haystack.cli.entry_point:main"
 
 [project.urls]
 "CI: GitHub" = "https://github.com/deepset-ai/haystack/actions"
@@ -251,13 +251,13 @@ allow-direct-references = true
 
 [tool.hatch.build.targets.sdist]
 include = [
-  "/haystack",
+  "/farm_haystack",
   "/VERSION.txt",
 ]
 
 [tool.hatch.build.targets.wheel]
 packages = [
-  "haystack",
+  "farm_haystack",
 ]
 
 [tool.black]
@@ -411,7 +411,7 @@ max-complexity = 28
 
 [tool.ruff.per-file-ignores]
 "examples/basic_qa_pipeline.py" = ["C416"]
-"haystack/telemetry.py" = ["F821"]
+"farm_haystack/telemetry.py" = ["F821"]
 
 [tool.ruff.pylint]
 allow-magic-value-types = ["float", "int", "str"]
@@ -423,5 +423,5 @@ max-statements = 105  # Default is 50
 
 [tool.coverage.run]
 omit = [
-    "haystack/testing/*",
+    "farm_haystack/testing/*",
 ]

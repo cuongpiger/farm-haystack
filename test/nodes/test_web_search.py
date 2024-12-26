@@ -3,8 +3,8 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
-from haystack.nodes.search_engine import WebSearch
-from haystack.schema import Document
+from farm_haystack.nodes.search_engine import WebSearch
+from farm_haystack.schema import Document
 
 try:
     import googleapiclient

@@ -6,8 +6,8 @@ import json
 
 from pydantic import BaseConfig
 from fastapi import FastAPI, APIRouter
-import haystack
-from haystack import Pipeline
+import farm_haystack
+from farm_haystack import Pipeline
 
 from rest_api.utils import get_app, get_pipelines
 from rest_api.config import LOG_LEVEL
@@ -44,7 +44,7 @@ def haystack_version():
     """
     Get the running Haystack version.
     """
-    return {"hs_version": haystack.__version__}
+    return {"hs_version": farm_haystack.__version__}
 
 
 @router.post("/query", response_model=QueryResponse, response_model_exclude_none=True)

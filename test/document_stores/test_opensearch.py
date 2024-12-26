@@ -8,7 +8,7 @@ import numpy as np
 
 import opensearchpy
 
-from haystack.document_stores.opensearch import (
+from farm_haystack.document_stores.opensearch import (
     OpenSearch,
     OpenSearchDocumentStore,
     RequestsHttpConnection,
@@ -16,8 +16,8 @@ from haystack.document_stores.opensearch import (
     RequestError,
     tqdm,
 )
-from haystack.errors import DocumentStoreError
-from haystack.testing import DocumentStoreBaseTestAbstract
+from farm_haystack.errors import DocumentStoreError
+from farm_haystack.testing import DocumentStoreBaseTestAbstract
 
 from .test_search_engine import SearchEngineDocumentStoreTestAbstract
 

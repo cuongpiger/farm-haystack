@@ -1,9 +1,9 @@
 from unittest.mock import MagicMock
-from haystack.nodes import PromptNode, PromptTemplate
+from farm_haystack.nodes import PromptNode, PromptTemplate
 import pytest
 from typing import Dict, Any
 
-from haystack.agents.memory import ConversationSummaryMemory
+from farm_haystack.agents.memory import ConversationSummaryMemory
 
 
 @pytest.fixture

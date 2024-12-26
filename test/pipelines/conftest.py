@@ -1,6 +1,6 @@
 import pytest
 
-from haystack.nodes import FARMReader
+from farm_haystack.nodes import FARMReader
 
 
 @pytest.fixture

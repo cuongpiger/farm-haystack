@@ -1,6 +1,6 @@
 import pytest
 
-from haystack.pipelines import RayPipeline
+from farm_haystack.pipelines import RayPipeline
 
 
 @pytest.fixture()

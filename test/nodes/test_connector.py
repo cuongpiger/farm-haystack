@@ -10,8 +10,8 @@ import pytest
 from selenium.webdriver import Chrome
 from selenium.webdriver.common.by import By
 
-from haystack.nodes.connector.crawler import Crawler
-from haystack.schema import Document
+from farm_haystack.nodes.connector.crawler import Crawler
+from farm_haystack.schema import Document
 
 
 @pytest.fixture()

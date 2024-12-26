@@ -2,7 +2,7 @@ import pytest
 
 import torch
 
-from haystack.modeling.data_handler.dataloader import NamedDataLoader
+from farm_haystack.modeling.data_handler.dataloader import NamedDataLoader
 
 
 @pytest.fixture

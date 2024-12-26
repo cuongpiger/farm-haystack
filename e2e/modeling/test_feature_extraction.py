@@ -4,7 +4,7 @@ import pytest
 import numpy as np
 from tokenizers.pre_tokenizers import WhitespaceSplit
 
-from haystack.modeling.model.feature_extraction import FeatureExtractor
+from farm_haystack.modeling.model.feature_extraction import FeatureExtractor
 
 
 BERT = "bert-base-cased"

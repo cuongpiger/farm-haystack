@@ -3,8 +3,8 @@ import pytest
 from math import isclose
 import numpy as np
 
-from haystack.modeling.infer import QAInferencer
-from haystack.modeling.data_handler.inputs import QAInput, Question
+from farm_haystack.modeling.infer import QAInferencer
+from farm_haystack.modeling.data_handler.inputs import QAInput, Question
 
 
 DOC_TEXT = """Twilight Princess was released to universal critical acclaim and commercial success. \

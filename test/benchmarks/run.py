@@ -5,8 +5,8 @@ import json
 
 import posthog
 
-from haystack import Pipeline
-from haystack.pipelines.config import read_pipeline_config_from_yaml
+from farm_haystack import Pipeline
+from farm_haystack.pipelines.config import read_pipeline_config_from_yaml
 
 from utils import prepare_environment, contains_reader, contains_retriever
 from reader import benchmark_reader

@@ -1,7 +1,7 @@
 import pytest
 
-from haystack.schema import Document
-from haystack.nodes.document_classifier.base import BaseDocumentClassifier
+from farm_haystack.schema import Document
+from farm_haystack.nodes.document_classifier.base import BaseDocumentClassifier
 
 
 @pytest.mark.integration

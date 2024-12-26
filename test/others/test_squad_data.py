@@ -1,9 +1,9 @@
 import pandas as pd
 import pytest
 
-from haystack.utils.squad_data import SquadData
-from haystack.utils.augment_squad import augment_squad
-from haystack.schema import Document, Label, Answer
+from farm_haystack.utils.squad_data import SquadData
+from farm_haystack.utils.augment_squad import augment_squad
+from farm_haystack.schema import Document, Label, Answer
 
 
 def test_squad_augmentation(samples_path):

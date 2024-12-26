@@ -1,7 +1,7 @@
 import pytest
 import torch
 
-from haystack.utils.torch_utils import resolve_torch_dtype
+from farm_haystack.utils.torch_utils import resolve_torch_dtype
 
 
 def test_extract_torch_dtype() -> None:

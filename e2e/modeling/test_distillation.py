@@ -1,7 +1,7 @@
 import torch
 
-from haystack.nodes import FARMReader
-from haystack.modeling.data_handler.processor import UnlabeledTextProcessor
+from farm_haystack.nodes import FARMReader
+from farm_haystack.modeling.data_handler.processor import UnlabeledTextProcessor
 
 
 def create_checkpoint(model):

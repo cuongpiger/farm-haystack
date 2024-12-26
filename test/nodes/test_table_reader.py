@@ -3,10 +3,10 @@ import logging
 import pandas as pd
 import pytest
 
-from haystack.schema import Document, Answer, Span, TableCell
-from haystack.pipelines.base import Pipeline
+from farm_haystack.schema import Document, Answer, Span, TableCell
+from farm_haystack.pipelines.base import Pipeline
 
-from haystack.nodes.reader.table import _calculate_answer_offsets
+from farm_haystack.nodes.reader.table import _calculate_answer_offsets
 
 
 @pytest.fixture

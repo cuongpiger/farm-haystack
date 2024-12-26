@@ -4,7 +4,7 @@ import math
 import pytest
 import numpy as np
 
-from haystack.schema import Document
+from farm_haystack.schema import Document
 
 from ..conftest import document_store
 

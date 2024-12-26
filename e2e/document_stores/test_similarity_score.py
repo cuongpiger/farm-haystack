@@ -1,7 +1,7 @@
 import pytest
 
-from haystack.nodes import EmbeddingRetriever
-from haystack.pipelines import DocumentSearchPipeline
+from farm_haystack.nodes import EmbeddingRetriever
+from farm_haystack.pipelines import DocumentSearchPipeline
 
 from ..conftest import document_store
 

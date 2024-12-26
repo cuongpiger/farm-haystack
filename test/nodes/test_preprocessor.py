@@ -11,9 +11,9 @@ from _pytest.monkeypatch import MonkeyPatch
 from _pytest.tmpdir import TempPathFactory
 from transformers import AutoTokenizer, PreTrainedTokenizerBase
 
-from haystack import Document
-from haystack.nodes.file_converter.pdf_xpdf import PDFToTextConverter
-from haystack.nodes.preprocessor.preprocessor import PreProcessor
+from farm_haystack import Document
+from farm_haystack.nodes.file_converter.pdf_xpdf import PDFToTextConverter
+from farm_haystack.nodes.preprocessor.preprocessor import PreProcessor
 
 
 TEXT = """

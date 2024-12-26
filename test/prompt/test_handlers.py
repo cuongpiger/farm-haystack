@@ -2,7 +2,7 @@ from unittest.mock import patch
 
 import pytest
 
-from haystack.nodes.prompt.invocation_layer.handlers import DefaultPromptHandler
+from farm_haystack.nodes.prompt.invocation_layer.handlers import DefaultPromptHandler
 
 
 @pytest.mark.unit

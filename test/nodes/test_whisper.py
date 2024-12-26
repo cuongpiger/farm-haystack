@@ -2,9 +2,9 @@ import os
 
 import pytest
 
-from haystack import Pipeline
-from haystack.nodes.audio import WhisperTranscriber
-from haystack.utils.import_utils import is_whisper_available
+from farm_haystack import Pipeline
+from farm_haystack.nodes.audio import WhisperTranscriber
+from farm_haystack.utils.import_utils import is_whisper_available
 
 
 @pytest.mark.skipif(os.environ.get("OPENAI_API_KEY", "") == "", reason="OpenAI API key not found")

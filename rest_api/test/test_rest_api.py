@@ -13,13 +13,13 @@ import pandas as pd
 import pytest
 from fastapi.testclient import TestClient
 import posthog
-from haystack import Document, Answer, Pipeline, TableCell
-import haystack
-from haystack.nodes import BaseReader, BaseRetriever
-from haystack.document_stores import BaseDocumentStore
-from haystack.errors import PipelineSchemaError
-from haystack.schema import Label, FilterType
-from haystack.nodes.file_converter import BaseConverter
+from farm_haystack import Document, Answer, Pipeline, TableCell
+import farm_haystack
+from farm_haystack.nodes import BaseReader, BaseRetriever
+from farm_haystack.document_stores import BaseDocumentStore
+from farm_haystack.errors import PipelineSchemaError
+from farm_haystack.schema import Label, FilterType
+from farm_haystack.nodes.file_converter import BaseConverter
 
 from rest_api.pipeline import _load_pipeline
 from rest_api.utils import get_app
@@ -616,7 +616,7 @@ def test_get_health_check(client):
                 response = client.get(url="/health")
                 assert response.status_code == 200
                 assert response.json() == {
-                    "version": haystack.__version__,
+                    "version": farm_haystack.__version__,
                     "cpu": {"used": 50.0},
                     "memory": {"used": 75.0},
                     "gpus": [

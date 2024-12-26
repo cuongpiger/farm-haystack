@@ -5,8 +5,8 @@ from unittest.mock import patch
 import pytest
 from tenacity import wait_none
 
-from haystack.errors import OpenAIError, OpenAIRateLimitError, OpenAIUnauthorizedError
-from haystack.utils.openai_utils import (
+from farm_haystack.errors import OpenAIError, OpenAIRateLimitError, OpenAIUnauthorizedError
+from farm_haystack.utils.openai_utils import (
     openai_request,
     _openai_text_completion_tokenization_details,
     check_openai_policy_violation,

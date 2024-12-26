@@ -3,10 +3,10 @@ from unittest.mock import patch, Mock
 from test.conftest import MockDocumentStore
 import pytest
 
-from haystack import Document, Pipeline
-from haystack.nodes import WebRetriever, PromptNode
-from haystack.nodes.retriever.link_content import html_content_handler
-from haystack.nodes.retriever.web import SearchResult
+from farm_haystack import Document, Pipeline
+from farm_haystack.nodes import WebRetriever, PromptNode
+from farm_haystack.nodes.retriever.link_content import html_content_handler
+from farm_haystack.nodes.retriever.web import SearchResult
 from test.nodes.conftest import example_serperdev_response
 
 

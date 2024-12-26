@@ -7,8 +7,8 @@ from pathlib import Path
 
 from fastapi import FastAPI, APIRouter, UploadFile, File, Form, HTTPException, Depends
 from pydantic import BaseModel
-from haystack import Pipeline
-from haystack.nodes import BaseConverter, PreProcessor
+from farm_haystack import Pipeline
+from farm_haystack.nodes import BaseConverter, PreProcessor
 
 from rest_api.utils import get_app, get_pipelines
 from rest_api.config import FILE_UPLOAD_PATH

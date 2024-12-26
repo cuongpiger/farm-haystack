@@ -1,11 +1,11 @@
 import os
 
-from haystack.agents import Agent, Tool
-from haystack.agents.base import ToolsManager
-from haystack.agents.types import AgentToolLogger
-from haystack.nodes import PromptNode, PromptTemplate
-from haystack.nodes.retriever.web import WebRetriever
-from haystack.pipelines import WebQAPipeline
+from farm_haystack.agents import Agent, Tool
+from farm_haystack.agents.base import ToolsManager
+from farm_haystack.agents.types import AgentToolLogger
+from farm_haystack.nodes import PromptNode, PromptTemplate
+from farm_haystack.nodes.retriever.web import WebRetriever
+from farm_haystack.pipelines import WebQAPipeline
 
 search_key = os.environ.get("SERPERDEV_API_KEY")
 if not search_key:

@@ -1,0 +1,2 @@
+from farm_haystack.nodes.image_to_text.base import BaseImageToText
+from farm_haystack.nodes.image_to_text.transformers import TransformersImageToText

@@ -1,7 +1,7 @@
 import pytest
 
-from haystack import Document
-from haystack.nodes.other.document_merger import DocumentMerger
+from farm_haystack import Document
+from farm_haystack.nodes.other.document_merger import DocumentMerger
 
 
 @pytest.fixture

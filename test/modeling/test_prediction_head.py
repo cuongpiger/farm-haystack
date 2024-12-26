@@ -1,9 +1,9 @@
 import logging
 
-from haystack.modeling.model.adaptive_model import AdaptiveModel
-from haystack.modeling.model.language_model import get_language_model
-from haystack.modeling.model.prediction_head import QuestionAnsweringHead
-from haystack.modeling.utils import set_all_seeds, initialize_device_settings
+from farm_haystack.modeling.model.adaptive_model import AdaptiveModel
+from farm_haystack.modeling.model.language_model import get_language_model
+from farm_haystack.modeling.model.prediction_head import QuestionAnsweringHead
+from farm_haystack.modeling.utils import set_all_seeds, initialize_device_settings
 
 
 def test_prediction_head_load_save(tmp_path, caplog=None):

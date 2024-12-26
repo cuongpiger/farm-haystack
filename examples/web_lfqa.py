@@ -1,9 +1,9 @@
 import logging
 import os
 
-from haystack.nodes import PromptNode, PromptTemplate, TopPSampler
-from haystack.nodes.retriever.web import WebRetriever
-from haystack.pipelines import WebQAPipeline
+from farm_haystack.nodes import PromptNode, PromptTemplate, TopPSampler
+from farm_haystack.nodes.retriever.web import WebRetriever
+from farm_haystack.pipelines import WebQAPipeline
 
 search_key = os.environ.get("SERPERDEV_API_KEY")
 if not search_key:

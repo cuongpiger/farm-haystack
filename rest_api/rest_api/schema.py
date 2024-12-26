@@ -7,7 +7,7 @@ import pandas as pd
 from pydantic import BaseModel, Field, Extra
 from pydantic import BaseConfig
 
-from haystack.schema import Answer, Document
+from farm_haystack.schema import Answer, Document
 
 
 BaseConfig.arbitrary_types_allowed = True

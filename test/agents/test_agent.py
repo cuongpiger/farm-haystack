@@ -9,12 +9,12 @@ from test.conftest import MockRetriever, MockPromptNode
 import pytest
 from events import Events
 
-from haystack import BaseComponent, Answer, Document
-from haystack.agents import Agent, AgentStep
-from haystack.agents.base import Tool, ToolsManager
-from haystack.agents.types import AgentTokenStreamingHandler, AgentToolLogger
-from haystack.nodes import PromptModel, PromptNode, PromptTemplate
-from haystack.pipelines import ExtractiveQAPipeline, DocumentSearchPipeline, BaseStandardPipeline
+from farm_haystack import BaseComponent, Answer, Document
+from farm_haystack.agents import Agent, AgentStep
+from farm_haystack.agents.base import Tool, ToolsManager
+from farm_haystack.agents.types import AgentTokenStreamingHandler, AgentToolLogger
+from farm_haystack.nodes import PromptModel, PromptNode, PromptTemplate
+from farm_haystack.pipelines import ExtractiveQAPipeline, DocumentSearchPipeline, BaseStandardPipeline
 
 
 @pytest.mark.unit

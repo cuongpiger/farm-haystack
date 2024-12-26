@@ -1,0 +1,1 @@
+from farm_haystack.nodes.question_generator.question_generator import QuestionGenerator

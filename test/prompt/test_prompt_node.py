@@ -6,15 +6,15 @@ from unittest.mock import AsyncMock, MagicMock, Mock, patch
 import pytest
 from prompthub import Prompt
 
-from haystack import BaseComponent, Document, MultiLabel, Pipeline
-from haystack.nodes.prompt import PromptModel, PromptNode, PromptTemplate
-from haystack.nodes.prompt.invocation_layer import (
+from farm_haystack import BaseComponent, Document, MultiLabel, Pipeline
+from farm_haystack.nodes.prompt import PromptModel, PromptNode, PromptTemplate
+from farm_haystack.nodes.prompt.invocation_layer import (
     AzureChatGPTInvocationLayer,
     AzureOpenAIInvocationLayer,
     ChatGPTInvocationLayer,
     OpenAIInvocationLayer,
 )
-from haystack.nodes.prompt.prompt_template import LEGACY_DEFAULT_TEMPLATES
+from farm_haystack.nodes.prompt.prompt_template import LEGACY_DEFAULT_TEMPLATES
 
 
 @pytest.fixture

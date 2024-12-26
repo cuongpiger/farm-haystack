@@ -3,9 +3,9 @@ from pathlib import Path
 
 import pytest
 
-from haystack import Document
-from haystack.document_stores import BaseDocumentStore
-from haystack.nodes import QuestionGenerator, EmbeddingRetriever, PseudoLabelGenerator
+from farm_haystack import Document
+from farm_haystack.document_stores import BaseDocumentStore
+from farm_haystack.nodes import QuestionGenerator, EmbeddingRetriever, PseudoLabelGenerator
 
 
 @pytest.mark.generator

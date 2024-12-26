@@ -2,10 +2,10 @@ import os
 
 import pytest
 
-from haystack import Pipeline
-from haystack.nodes import TopPSampler, SentenceTransformersRanker
-from haystack.nodes.search_engine import WebSearch
-from haystack.schema import Document
+from farm_haystack import Pipeline
+from farm_haystack.nodes import TopPSampler, SentenceTransformersRanker
+from farm_haystack.nodes.search_engine import WebSearch
+from farm_haystack.schema import Document
 
 docs = [
     Document(

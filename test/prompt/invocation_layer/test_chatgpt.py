@@ -3,7 +3,7 @@ from unittest.mock import patch
 
 import pytest
 
-from haystack.nodes.prompt.invocation_layer import ChatGPTInvocationLayer
+from farm_haystack.nodes.prompt.invocation_layer import ChatGPTInvocationLayer
 
 
 @pytest.mark.unit

@@ -6,7 +6,7 @@ from unittest.mock import Mock
 import pytest
 import yaml
 
-from haystack.utils.deepsetcloud import DeepsetCloudClient, PipelineClient
+from farm_haystack.utils.deepsetcloud import DeepsetCloudClient, PipelineClient
 
 
 @pytest.fixture

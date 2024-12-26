@@ -2,11 +2,11 @@ import os
 
 import pytest
 
-from haystack.nodes import PromptNode
-from haystack.nodes.retriever.web import WebRetriever
-from haystack.pipelines import ExtractiveQAPipeline, WebQAPipeline
+from farm_haystack.nodes import PromptNode
+from farm_haystack.nodes.retriever.web import WebRetriever
+from farm_haystack.pipelines import ExtractiveQAPipeline, WebQAPipeline
 
-from haystack.schema import Answer
+from farm_haystack.schema import Answer
 
 
 @pytest.mark.integration

@@ -3,7 +3,7 @@ from unittest.mock import patch
 import logging
 import pytest
 
-from haystack.nodes.prompt.invocation_layer import OpenAIInvocationLayer
+from farm_haystack.nodes.prompt.invocation_layer import OpenAIInvocationLayer
 
 
 @pytest.fixture

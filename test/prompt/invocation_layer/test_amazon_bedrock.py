@@ -3,11 +3,11 @@ from unittest.mock import call, patch, MagicMock
 
 import pytest
 
-from haystack.lazy_imports import LazyImport
+from farm_haystack.lazy_imports import LazyImport
 
-from haystack.errors import AmazonBedrockConfigurationError
-from haystack.nodes.prompt.invocation_layer import AmazonBedrockInvocationLayer
-from haystack.nodes.prompt.invocation_layer.amazon_bedrock import (
+from farm_haystack.errors import AmazonBedrockConfigurationError
+from farm_haystack.nodes.prompt.invocation_layer import AmazonBedrockInvocationLayer
+from farm_haystack.nodes.prompt.invocation_layer.amazon_bedrock import (
     AI21LabsJurassic2Adapter,
     AnthropicClaudeAdapter,
     BedrockModelAdapter,

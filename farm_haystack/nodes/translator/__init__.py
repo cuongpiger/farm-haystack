@@ -1,0 +1,2 @@
+from farm_haystack.nodes.translator.base import BaseTranslator
+from farm_haystack.nodes.translator.transformers import TransformersTranslator

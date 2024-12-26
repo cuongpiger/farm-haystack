@@ -5,9 +5,9 @@ import traceback
 import datetime
 import logging
 
-from haystack import Pipeline
-from haystack.nodes import BaseReader
-from haystack.utils import aggregate_labels
+from farm_haystack import Pipeline
+from farm_haystack.nodes import BaseReader
+from farm_haystack.utils import aggregate_labels
 from utils import load_eval_data, get_reader_config
 
 

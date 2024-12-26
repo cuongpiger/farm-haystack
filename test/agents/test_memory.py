@@ -1,6 +1,6 @@
 import pytest
 from typing import Dict, Any
-from haystack.agents.memory import NoMemory, ConversationMemory
+from farm_haystack.agents.memory import NoMemory, ConversationMemory
 
 
 @pytest.mark.unit

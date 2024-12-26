@@ -4,11 +4,11 @@ import tempfile
 
 import pandas as pd
 
-from haystack import Label, Document, Answer, Pipeline
-from haystack.document_stores import eval_data_from_json
-from haystack.nodes import BaseReader, BaseRetriever
-from haystack.utils import launch_es, launch_opensearch, launch_weaviate
-from haystack.modeling.data_handler.processor import http_get
+from farm_haystack import Label, Document, Answer, Pipeline
+from farm_haystack.document_stores import eval_data_from_json
+from farm_haystack.nodes import BaseReader, BaseRetriever
+from farm_haystack.utils import launch_es, launch_opensearch, launch_weaviate
+from farm_haystack.modeling.data_handler.processor import http_get
 
 import logging
 from typing import Dict, Union, Tuple

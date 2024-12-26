@@ -1,8 +1,8 @@
 import pytest
 
 
-from haystack import Document, Pipeline
-from haystack.nodes.other.join_docs import JoinDocuments
+from farm_haystack import Document, Pipeline
+from farm_haystack.nodes.other.join_docs import JoinDocuments
 from copy import deepcopy
 
 
