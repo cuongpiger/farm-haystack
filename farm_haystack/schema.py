@@ -349,7 +349,7 @@ class TableCell:
     """
 
 
-@dataclass
+@dataclass(config=ConfigDict(arbitrary_types_allowed=True))
 class Answer:
     answer: str
     type: Literal["generative", "extractive", "other"] = "extractive"
