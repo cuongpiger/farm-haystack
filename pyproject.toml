@@ -69,7 +69,7 @@ dependencies = [
   # Web Retriever
   "boilerpy3",
 
-  # Multimodal Embedder haystack/nodes/retriever/multimodal/embedder.py
+  # Multimodal Embedder farm_haystack/nodes/retriever/multimodal/embedder.py
   "Pillow",
 
   # OpenAI tokenizer
@@ -87,7 +87,7 @@ dependencies = [
 [project.optional-dependencies]
 inference = [
   "transformers[torch,sentencepiece]>=4.46,<5.0",
-  "sentence-transformers<=3.0.0,>=2.3.1",  # See haystack/nodes/retriever/_embedding_encoder.py, _SentenceTransformersEmbeddingEncoder
+  "sentence-transformers<=3.0.0,>=2.3.1",  # See farm_haystack/nodes/retriever/_embedding_encoder.py, _SentenceTransformersEmbeddingEncoder
   "huggingface-hub>=0.5.0",
 ]
 elasticsearch = [
@@ -233,7 +233,7 @@ all-gpu = [
 ]
 
 [project.scripts]
-haystack = "farm_haystack.cli.entry_point:main"
+farm_haystack = "farm_haystack.cli.entry_point:main"
 
 [project.urls]
 "CI: GitHub" = "https://github.com/deepset-ai/haystack/actions"
